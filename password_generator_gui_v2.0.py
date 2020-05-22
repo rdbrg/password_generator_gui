@@ -17,7 +17,7 @@ class MainWindow(tk.Tk):
         w = self.winfo_screenwidth() // 2
         h = self.winfo_screenheight() // 2
 
-        tk.Tk.wm_iconbitmap(self, default='D:\YandexDisk\password_generator_gui\icon.ico')
+        # tk.Tk.wm_iconbitmap(self, default='D:\YandexDisk\password_generator_gui\icon.ico')
         tk.Tk.geometry(self, f"{width}x{height}+{w - width // 2}+{h - height // 2}")
         tk.Tk.resizable(self, False, False)
 
@@ -59,7 +59,7 @@ class MainWindow(tk.Tk):
                                        string.ascii_letters,
                                        string.digits + string.ascii_letters,
                                        string.digits + string.ascii_letters + string.punctuation]
-        self.name_rb_type_list = ["numeric", "string", "numeric + string", "numeric + string + punctuation"]
+        self.name_rb_type_list = ["numbers", "letters", "numbers + letters", "numbers + letters + punctuation"]
         self.rb_type.set(self.charset_variation_list[3])
         self.radiobutton_type_list = []
         j = 0
